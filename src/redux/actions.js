@@ -5,6 +5,7 @@ import {
   HIDE_LOADER,
   SHOW_ALERT,
   SHOW_LOADER,
+  REQUEST_POSTS,
 } from "./types";
 
 export function createPost(post) {
@@ -39,7 +40,10 @@ export function hideAlert() {
 }
 
 export function fetchPosts() {
-  return async (dispatch) => {
+  return {
+    type: REQUEST_POSTS,
+  };
+  /* return async (dispatch) => {
     try {
       dispatch(showLoader());
       const response = await fetch(
@@ -52,5 +56,5 @@ export function fetchPosts() {
       dispatch(showAlert(`${error}`));
       dispatch(hideLoader());
     }
-  };
+  }; */
 }

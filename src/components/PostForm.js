@@ -35,7 +35,7 @@ class PostForm extends Component {
       <form onSubmit={this.submitHandler}>
         {this.props.alert && <Alert text={this.props.alert} />}
 
-        <div class="form-group">
+        <div className="form-group">
           <label htmlFor="title">Заголовок поста</label>
           <input
             type="text"
